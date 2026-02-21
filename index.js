@@ -11,7 +11,8 @@ app.use(express.json());
 
 // Base Route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Card Collection API" });
+  // improved greeting with timestamp
+  res.json({ message: "Welcome to Card Collection API", timestamp: new Date().toISOString() });
 });
 
 // Mount Routes
